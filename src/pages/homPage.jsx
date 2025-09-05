@@ -32,37 +32,36 @@ export default function HomePage() {
 
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden min-h-screen flex items-center bg-[#faf9f6] py-10">
+      <section className="relative overflow-hidden min-h-screen flex items-center bg-[#faf9f6] py-0">
         <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center w-full">
           {/* Left Side - Content */}
           <div className="w-full mx-auto">
-            <div className="flex items-center mb-4 space-x-4 text-lg">
+            <div className="flex items-center mb-0 space-x-4 text-lg">
               <span className="text-gray-700"></span>
             </div>
-<h1
-  className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight text-center"
-  style={{ fontFamily: 'Libertinus Serif, serif' }}
->
-  The{' '}
-  <span className="relative inline-block">
-    simplest
-    <img src="/title-highlight-2.png" alt="highlight" width="200" />
-
-  </span>{' '}
-  way to create forms
-</h1>
+            <h1
+              className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight text-center"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              The{' '}
+              <span className="relative inline-block">
+                simplest
+                <img src="/title-highlight-2.png" alt="highlight" width="200" />
+              </span>{' '}
+              way to create forms
+            </h1>
 
 
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Say goodbye to boring forms. Meet FormBuilder — the free, intuitive form builder you've been looking for!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
-              <Link to="/preview" className="bg-pink-600 text-white rounded-xl px-8 py-4 text-lg font-semibold hover:bg-pink-700 transition">
-                Try Demo
-              </Link>
-              <Link to="/editor" className="bg-white border-2 border-pink-600 text-pink-600 rounded-xl px-8 py-4 text-lg font-semibold hover:bg-pink-50 transition">
-                Create Quiz
-              </Link>
+              <Link to="/preview" className="bg-pink-600 text-white rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-700 transition">
+  Try Demo
+</Link>
+<Link to="/editor" className="bg-white border-2 border-pink-600 text-pink-600 rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-50 transition">
+  Create Quiz
+</Link>
             </div>
             <div className="text-pink-600 text-base mt-2 text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Free to use • No registration required
@@ -102,52 +101,72 @@ export default function HomePage() {
               FormBuilder makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.
             </p>
           </div>
-          
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="text-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-rose-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Users className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-                Categorize Questions
-              </h3>
-              <p className="text-gray-600">
-                Drag and drop items into categories. Perfect for sorting exercises and classification tasks.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="text-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-rose-400 to-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-                Cloze Questions
-              </h3>
-              <p className="text-gray-600">
-                Create fill-in-the-blank questions with multiple choice options. Great for vocabulary and grammar.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="text-center p-8 rounded-2xl bg-white shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-400 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-                Comprehension
-              </h3>
-              <p className="text-gray-600">
-                Build reading comprehension with passages and multiple choice questions. Ideal for assessments.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 
 
+      {/* Connect your favorite tools*/}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
+          {/* Left: Heading and Description */}
+          <div className="md:w-1/2 w-full px-10 md:ml-12 md:flex md:flex-col md:items-center">
+            <h2
+              className="text-3xl md:text-5xl font-bold mb-6"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              <span className="relative inline-block">
+                Connect
+                <img
+                  src="/title-highlight-2.png"
+                  alt="highlight"
+                  className="absolute left-1/2 -translate-x-1/2 top-full w-[100%] pointer-events-none select-none"
+                  // style={{ zIndex: -1 }}
+                />
+              </span>{' '}
+              your favorite tools
+            </h2>
+            <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+              Save time using popular integrations to sync your form submissions.
+            </p>
+          </div>
+          {/* Right: Image */}
+          <div className="md:w-1/2 w-full flex justify-center">
+            <img
+              src="/strategy.png"
+              alt="stratergy Features"
+              className="w-full max-w-md w-[55%]"
+            />
+          </div>
+        </div>
+
+       {/* Integration Logos and Descriptions */}
+        <div className="flex flex-col items-center mt-10">
+          <div className="flex gap-72 mb-8">
+            <img src="/icon_NOTION.png" alt="Notion" className="w-8 h-8 object-contain" />
+            <img src="/icon_GOOGLE_SHEETS.png" alt="Google Sheets" className="w-8 h-8 object-contain" />
+            <img src="/icon_AIRTABLE.png" alt="Airtable" className="w-8 h-8 object-contain" />
+          </div>
+          <ul className="flex flex-col md:flex-row gap-8 w-full max-w-4xl justify-center text-center mt-1">
+            <li className="flex-1">
+              <span className="font-bold">Notion</span>
+              <span className="font-normal text-gray-500 block"> Send submissions to Notion.</span>
+            </li>
+            <li className="flex-1">
+              <span className="font-bold">Google Sheets</span>
+              <span className="font-normal text-gray-500 block"> Send submissions to a sheet.</span>
+            </li>
+            <li className="flex-1">
+              <span className="font-bold">Airtable</span>
+              <span className="font-normal text-gray-500 block"> Send submissions to Airtable.</span>
+            </li>
+          </ul>
+        </div>
+        
+      </section>
+
+
+
+      
       {/* Craft Intelligent Forms Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
@@ -163,7 +182,7 @@ export default function HomePage() {
                 <img
                   src="/title-highlight-2.png"
                   alt="highlight"
-                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[100%] pointer-events-none select-none"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-0 w-[100%] pointer-events-none select-none"
                   // style={{ zIndex: -1 }}
                 />
               </span>{' '}
@@ -184,7 +203,7 @@ export default function HomePage() {
         </div>
 
        {/* Conditional Logic Box */}
-        <div className="mt-16 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
+        <div className="mt-0 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
           {/* Text */}
           <div className="w-full p-10">
             <h3
@@ -211,7 +230,7 @@ export default function HomePage() {
 
       {/* Make forms uniquely yours */}
       <section className="bg-white py-20">
-        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center ">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
           {/* Left: Heading and Description */}
           <div className="md:w-1/2 w-full px-10 md:ml-16 md:flex md:flex-col md:items-center">
             <h2
@@ -237,12 +256,59 @@ export default function HomePage() {
           <div className="md:w-1/2 w-full flex justify-center">
             <img
               src="/customize.png"
-              alt="customizable Features"
+              alt="customize Features"
               className="w-full max-w-md w-[60%]"
             />
           </div>
         </div>
-        </section>
+     {/* Conditional Logic Box */}
+        <div className="mt-1 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
+          {/* Text */}
+          <div className="w-full p-10">
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              Customize your form
+            </h3>
+            <p className="text-lg text-gray-700 mb-8" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+              Use our pre-made themes or create your own design by customizing number of quizes, buttons, and more.
+            </p>
+            <div className="w-full flex justify-center">
+              <img
+                src="/smartquiz.png"
+                alt="Conditional Logic"
+                className="w-full max-w-full rounded-2xl shadow-md"
+                style={{ objectFit: "cover", height: "340px" }}
+              />
+            </div>
+          </div>
+        </div>
+        {/* Customization Features Section */}
+        <div className="flex flex-col items-center mt-10">
+          <img
+            src="/customizelogo.png"
+            alt="Customize Logo"
+            className="w-320 h-320 object-contain mb-8"
+          />
+          <ul className="flex flex-col md:flex-row gap-12 w-full max-w-5xl justify-between px-2">
+            <li className="flex-1 text-center">
+              <span className="font-bold block md:text-left md:pl-8">Column layout</span>
+              <span className="font-normal text-gray-500 block mt-1">Display content side-by-side using columns.</span>
+            </li>
+            <li className="flex-1 text-center">
+              <span className="font-bold block">Custom CSS</span>
+              <span className="font-normal text-gray-500 block mt-1">Inject custom CSS to fully control your form design.</span>
+            </li>
+            <li className="flex-1 text-center">
+              <span className="font-bold block md:text-right md:pr-8">Images</span>
+              <span className="font-normal text-gray-500 block mt-1">Add a logo, cover image and embed visuals.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+
       
       {/* Reviews Section */}
       <section className="max-w-7xl mx-auto px-6 py-16">
@@ -311,13 +377,19 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-pink-50 to-rose-50">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-            Ready to Create Amazing Quizzes?
+      <section className="py-6 bg-white">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col items-center">
+          <img
+            src="/roll-up-sleeves.png"
+            alt="Roll up sleeves"
+            className="w-full max-w-xl mb-10 rounded-3xl object-cover"
+            style={{ minHeight: "320px" }}
+          />
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+            Build stunning Quizzes for free
           </h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Join thousands of educators who are already using FormBuilder to create engaging, interactive learning experiences.
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto text-center">
+            It’s as simple as one-two-three, and guess what? You don’t even need an account to try it out!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
@@ -338,26 +410,26 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className=" py-12">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-rose-500 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
+                <div className="w-8 h-8  rounded-lg flex items-center justify-center">
+                  <Zap className="w-5 h-5 t" />
                 </div>
-                <span className="text-xl font-bold" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+                <span className="text-2xl font-bold" style={{ fontFamily: 'Libertinus Serif, serif' }}>
                   FormBuilder
                 </span>
               </div>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-500 text-sm">
                 Create engaging, interactive quizzes that make learning fun and effective.
               </p>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Features</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-500">
                 <li>Categorize Questions</li>
                 <li>Cloze Questions</li>
                 <li>Comprehension</li>
@@ -367,7 +439,7 @@ export default function HomePage() {
             
             <div>
               <h4 className="font-semibold mb-4">Resources</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-500">
                 <li>Documentation</li>
                 <li>Tutorials</li>
                 <li>Examples</li>
@@ -377,7 +449,7 @@ export default function HomePage() {
             
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <ul className="space-y-2 text-sm text-gray-500">
                 <li>About</li>
                 <li>Contact</li>
                 <li>Privacy</li>
@@ -390,6 +462,13 @@ export default function HomePage() {
             <p>&copy; 2024 FormBuilder. All rights reserved.</p>
           </div>
         </div>
+      <div className="w-full flex justify-center mt-8">
+        <img
+          src="/dive-in.png"
+          alt="Dive In"
+          className="w-full max-w-2xl object-contain"
+        />
+      </div>
       </footer>
     </div>
   );
