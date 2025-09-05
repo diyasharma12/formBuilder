@@ -6,16 +6,13 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-white font-libertinus">
       {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-pink-100 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-pink-400 to-pink-600 rounded-lg flex items-center justify-center">
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-              </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-black bg-clip-text text-transparent">
                 FormBuilder
               </span>
             </div>
@@ -27,36 +24,39 @@ export default function HomePage() {
                 Take Quiz
               </Link>
               <Link to="/editor" className="btn-primary">
-                Get Started
+                Create Form
               </Link>
             </div>
           </div>
         </div>
-      </nav>
 
-      {/* Updated Hero Section - Inspired by Automated Proctoring */}
-      <section className="relative overflow-hidden py-20 bg-[#faf9f6]">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden min-h-screen flex items-center bg-[#faf9f6] py-10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center w-full">
           {/* Left Side - Content */}
-          <div className="md:w-1/2 w-full mb-12 md:mb-0">
+          <div className="w-full mx-auto">
             <div className="flex items-center mb-4 space-x-4 text-lg">
-              <span className="font-bold text-gray-700 flex items-center">
-                <span role="img" aria-label="laurel">🏆</span>
-                <span className="ml-2">10,000+ Quizzes Created</span>
-              </span>
-              <span className="text-gray-700">|</span>
-              <span className="flex items-center">
-                <span className="text-yellow-500 font-bold">4.8/5</span>
-                <span className="ml-1 text-yellow-400">★★★★★</span>
-              </span>
+              <span className="text-gray-700"></span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Interactive Quiz Builder <br /> Made Simple
-            </h1>
-            <p className="text-xl text-gray-700 mb-8 max-w-2xl" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Create engaging, interactive quizzes with our comprehensive set of question types. No more boring assessments!
+<h1
+  className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight text-center"
+  style={{ fontFamily: 'Libertinus Serif, serif' }}
+>
+  The{' '}
+  <span className="relative inline-block">
+    simplest
+    <img src="/title-highlight-2.png" alt="highlight" width="200" />
+
+  </span>{' '}
+  way to create forms
+</h1>
+
+
+            <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+              Say goodbye to boring forms. Meet FormBuilder — the free, intuitive form builder you've been looking for!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-2">
+            <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
               <Link to="/preview" className="bg-pink-600 text-white rounded-xl px-8 py-4 text-lg font-semibold hover:bg-pink-700 transition">
                 Try Demo
               </Link>
@@ -64,33 +64,45 @@ export default function HomePage() {
                 Create Quiz
               </Link>
             </div>
-            <div className="text-pink-600 text-base mt-2" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+            <div className="text-pink-600 text-base mt-2 text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Free to use • No registration required
             </div>
-          </div>
-          
-          {/* Right Side - Hero Image */}
-          <div className="md:w-1/2 w-full flex justify-center items-center">
-            <img
-              src="/hero.png"
-              alt="Interactive Quiz Builder Illustration"
-              className="max-w-[480px] w-full h-auto"
-            />
           </div>
         </div>
       </section>
 
+      {/* Decorative Human Images as Background Elements */}
+      <div className="absolute bottom-0 left-0 right-0 flex justify-between px-16" style={{ height: "0px" }}>
+        {/* Human left */}
+        <img
+          src="/human.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute left-16 -top-40 w-64 opacity-100 pointer-events-none select-none"
+          style={{ zIndex: 0 }}
+        />
+        {/* Human1 right */}
+        <img
+          src="/human1.png"
+          alt=""
+          aria-hidden="true"
+          className="hidden md:block absolute right-16 -top-40 w-64 opacity-100 pointer-events-none select-none"
+          style={{ zIndex: 0 }}
+        />
+      </div>
+
       {/* Features Section - Clean Cards */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-10 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Everything You Need to Create
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Build engaging quizzes with our comprehensive set of question types and intuitive tools
+              FormBuilder makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.
             </p>
           </div>
+          
 
           <div className="grid md:grid-cols-3 gap-8">
             {/* Feature 1 */}
@@ -135,7 +147,102 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* User Feedback Section - Clean & Professional */}
+
+      {/* Craft Intelligent Forms Section */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
+          {/* Left: Heading and Description */}
+          <div className="md:w-1/2 w-full px-10 md:ml-16 md:flex md:flex-col md:items-center">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              Craft{' '}
+              <span className="relative inline-block">
+                intelligent
+                <img
+                  src="/title-highlight-2.png"
+                  alt="highlight"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[100%] pointer-events-none select-none"
+                  // style={{ zIndex: -1 }}
+                />
+              </span>{' '}
+              forms
+            </h2>
+            <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+              Our smart features make it easy to turn your forms into a tailored experience for every respondent.
+            </p>
+          </div>
+          {/* Right: Image */}
+          <div className="md:w-1/2 w-full flex justify-center">
+            <img
+              src="/smart.png"
+              alt="Smart Features"
+              className="w-full max-w-md w-[60%]"
+            />
+          </div>
+        </div>
+
+       {/* Conditional Logic Box */}
+        <div className="mt-16 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
+          {/* Text */}
+          <div className="w-full p-10">
+            <h3
+              className="text-2xl md:text-3xl font-bold mb-4"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              Conditional logic
+            </h3>
+            <p className="text-lg text-gray-700 mb-8" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+              Build dynamic forms that adapt based on prior inputs or external data. Show and hide blocks, insert branching, or calculate values to create a personalized form experience.
+            </p>
+            <div className="w-full flex justify-center">
+              <img
+                src="/smartquiz.png"
+                alt="Conditional Logic"
+                className="w-full max-w-full rounded-2xl shadow-md"
+                style={{ objectFit: "cover", height: "340px" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Make forms uniquely yours */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center ">
+          {/* Left: Heading and Description */}
+          <div className="md:w-1/2 w-full px-10 md:ml-16 md:flex md:flex-col md:items-center">
+            <h2
+              className="text-4xl md:text-5xl font-bold mb-6"
+              style={{ fontFamily: 'Libertinus Serif, serif' }}
+            >
+              Make forms uniquely{' '}
+              <span className="relative inline-block">
+                yours.
+                <img
+                  src="/title-highlight-2.png"
+                  alt="highlight"
+                  className="absolute left-1/2 -translate-x-1/2 top-full mt-1 w-[100%] pointer-events-none select-none"
+                  // style={{ zIndex: -1 }}
+                />
+              </span>{' '}
+            </h2>
+            <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
+            Easily customize the design and layout and the number of quizes to fit any form to your brand.
+            </p>
+          </div>
+          {/* Right: Image */}
+          <div className="md:w-1/2 w-full flex justify-center">
+            <img
+              src="/customize.png"
+              alt="customizable Features"
+              className="w-full max-w-md w-[60%]"
+            />
+          </div>
+        </div>
+        </section>
       
       {/* Reviews Section */}
       <section className="max-w-7xl mx-auto px-6 py-16">
