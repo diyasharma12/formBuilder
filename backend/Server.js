@@ -3,21 +3,26 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import cors from "cors";
 import quizRoutes from "./routes/quizRoutes.js";
+import notionRoutes from "./routes/notionRoutes.js";
+import googleSheetRoutes from "./routes/googleSheetRoutes.js";
+
 
 dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());               // allow frontend to call backend
-app.use(express.json({ limit: "5mb" })); // parse JSON
+app.use(cors());
+app.use(express.json({ limit: "5mb" }));
 
-// Connect to MongoDB
+// MongoDB
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch(err => console.error("❌ MongoDB connection error:", err));
 
-// Routes (mounted at /api/quizzes)
+// Routes
 app.use("/api/quizzes", quizRoutes);
+app.use("/api/notion", notionRoutes);
+app.use("/api/googlesheets", googleSheetRoutes);
 
 // Health check
 app.get("/api/health", (req, res) => res.json({ ok: true }));

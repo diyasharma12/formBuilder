@@ -7,7 +7,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/quizzes') // Fetch ALL quizzes
+    axios.get('http://localhost:5000/api/quizzes')
       .then(res => {
         setQuizzes(res.data);
         setLoading(false);

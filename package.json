@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@notionhq/client": "^5.0.0",
     "axios": "^1.11.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "googleapis": "^159.0.0",
     "lucide-react": "^0.539.0",
     "mongoose": "^8.17.1",
     "react": "^19.1.1",

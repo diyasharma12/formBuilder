@@ -43,30 +43,45 @@ export default function PreviewPage() {
     setQuiz({ ...quiz, questions: nextQuestions });
   };
 
-  const handleSubmit = () => {
-    // Collect all answers
-    const answers = quiz.questions.map((q, index) => ({
-      questionIndex: index,
-      type: q.type,
-      answer: q.answer,
-      isAnswered: q.isAnswered
-    }));
+  const handleSubmit = async () => {
+  if (!quiz) return;
 
-    const submission = {
-      quizId: quiz._id,
-      quizName: quiz.name,
-      submittedAt: new Date().toISOString(),
-      answers: answers,
-      totalQuestions: quiz.questions.length,
-      answeredQuestions: answers.filter(a => a.isAnswered).length
-    };
+  // Collect all answers
+  const answers = quiz.questions.map((q, index) => ({
+    questionIndex: index,
+    type: q.type,
+    answer: q.answer,
+    isAnswered: q.isAnswered
+  }));
 
-    setSubmissionData(submission);
-    setIsSubmitted(true);
-    
-    // You can also send this to your backend if needed
-    console.log("Quiz submitted:", submission);
+  const quizData = {
+    quizId: quiz._id,
+    quizName: quiz.name,
+    submittedAt: new Date().toISOString(),
+    answers: answers,
+    totalQuestions: quiz.questions.length,
+    answeredQuestions: answers.filter(a => a.isAnswered).length
   };
+
+  setSubmissionData(quizData);
+  setIsSubmitted(true);
+
+  // Send to backend (Notion)
+  try {
+    await axios.post("http://localhost:5000/api/notion/submitQuiz", quizData);
+    console.log("Submitted to Notion successfully");
+  } catch (err) {
+    console.error("Failed to submit quiz data to Notion:", err);
+  }
+
+  // Send to backend (Google Sheets)
+  try {
+    await axios.post("http://localhost:5000/api/googlesheets/submitQuiz", quizData);
+    console.log("Submitted to Google Sheets successfully");
+  } catch (err) {
+    console.error("Failed to submit quiz data to Google Sheets:", err);
+  }
+};
 
   if (!quiz) {
     return <div className="p-6">Loading quiz or no quiz found...</div>;

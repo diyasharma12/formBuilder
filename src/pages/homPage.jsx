@@ -1,8 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { ArrowUpRight, Star, CheckCircle, Zap, Shield, Users, BarChart3, ExternalLink } from "lucide-react";
 
+
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  const handleNotionClick = () => {
+    navigate('/notion-integration');
+  };
+
+  const handleGoogleSheetsClick = () => {
+    navigate('/google-sheets-integration');
+  };
+
+  const handleAirtableClick = () => {
+    navigate('/airtable-integration');
+  };
+
   return (
     <div className="min-h-screen bg-white font-libertinus">
       {/* Navigation */}
@@ -30,7 +45,6 @@ export default function HomePage() {
           </div>
         </div>
 
-
       {/* Hero Section */}
       <section className="relative overflow-hidden min-h-screen flex items-center bg-[#faf9f6] py-0">
         <div className="max-w-7xl mx-auto px-6 flex flex-col justify-center w-full">
@@ -57,11 +71,11 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
               <Link to="/preview" className="bg-pink-600 text-white rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-700 transition">
-  Try Demo
-</Link>
-<Link to="/editor" className="bg-white border-2 border-pink-600 text-pink-600 rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-50 transition">
-  Create Quiz
-</Link>
+              Try Demo
+            </Link>
+            <Link to="/editor" className="bg-white border-2 border-pink-600 text-pink-600 rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-50 transition">
+              Create Quiz
+            </Link>
             </div>
             <div className="text-pink-600 text-base mt-2 text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Free to use • No registration required
@@ -104,7 +118,6 @@ export default function HomePage() {
         </div>
       </section>
 
-
       {/* Connect your favorite tools*/}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
@@ -139,7 +152,7 @@ export default function HomePage() {
           </div>
         </div>
 
-       {/* Integration Logos and Descriptions */}
+        {/* Integration Logos and Descriptions */}
         <div className="flex flex-col items-center mt-10">
           <div className="flex gap-72 mb-8">
             <img src="/icon_NOTION.png" alt="Notion" className="w-8 h-8 object-contain" />
@@ -147,16 +160,16 @@ export default function HomePage() {
             <img src="/icon_AIRTABLE.png" alt="Airtable" className="w-8 h-8 object-contain" />
           </div>
           <ul className="flex flex-col md:flex-row gap-8 w-full max-w-4xl justify-center text-center mt-1">
-            <li className="flex-1">
-              <span className="font-bold">Notion</span>
+            <li className="flex-1 cursor-pointer" onClick={handleNotionClick}>
+              <span className="font-bold hover:underline">Notion</span>
               <span className="font-normal text-gray-500 block"> Send submissions to Notion.</span>
             </li>
-            <li className="flex-1">
-              <span className="font-bold">Google Sheets</span>
+            <li className="flex-1 cursor-pointer" onClick={handleGoogleSheetsClick}>
+              <span className="font-bold hover:underline">Google Sheets</span>
               <span className="font-normal text-gray-500 block"> Send submissions to a sheet.</span>
             </li>
-            <li className="flex-1">
-              <span className="font-bold">Airtable</span>
+            <li className="flex-1 cursor-pointer" onClick={handleAirtableClick}>
+              <span className="font-bold hover:underline">Airtable</span>
               <span className="font-normal text-gray-500 block"> Send submissions to Airtable.</span>
             </li>
           </ul>
@@ -164,9 +177,6 @@ export default function HomePage() {
         
       </section>
 
-
-
-      
       {/* Craft Intelligent Forms Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center ">
@@ -202,7 +212,7 @@ export default function HomePage() {
           </div>
         </div>
 
-       {/* Conditional Logic Box */}
+        {/* Conditional Logic Box */}
         <div className="mt-0 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
           {/* Text */}
           <div className="w-full p-10">
@@ -226,7 +236,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
 
       {/* Make forms uniquely yours */}
       <section className="bg-white py-20">
@@ -261,7 +270,7 @@ export default function HomePage() {
             />
           </div>
         </div>
-     {/* Conditional Logic Box */}
+      {/* Conditional Logic Box */}
         <div className="mt-1 max-w-5xl mx-auto -mt-1 bg-gray-50 rounded-3xl shadow-xl flex flex-col items-center overflow-hidden">
           {/* Text */}
           <div className="w-full p-10">
@@ -308,8 +317,6 @@ export default function HomePage() {
         </div>
       </section>
 
-
-      
       {/* Reviews Section */}
       <section className="max-w-7xl mx-auto px-6 py-16">
         <h2
@@ -415,7 +422,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
-                <div className="w-8 h-8  rounded-lg flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg flex items-center justify-center">
                   <Zap className="w-5 h-5 t" />
                 </div>
                 <span className="text-2xl font-bold" style={{ fontFamily: 'Libertinus Serif, serif' }}>
