@@ -8,7 +8,7 @@ const GoogleSheetsIntegration = () => {
         <div className="md:w-1/2 w-full px-4 md:px-10 mt-10 md:mt-0">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Google Sheets</h1>
           <p className="text-lg text-gray-700 mb-6">
-            With Tally's Google Sheets integration, you can send your Tally form responses straight to Google Sheets. This is a great way to manage and share your form results with your team and create visual reports of your data.
+            With Kwiz's Google Sheets integration, you can send your quiz responses straight to Google Sheets. This is a great way to manage and share your form results with your team and create visual reports of your data.
           </p>
           <div className="bg-green-50 p-4 rounded-lg flex items-center mb-6">
             <svg

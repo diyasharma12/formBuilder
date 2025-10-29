@@ -28,7 +28,7 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               <span className="text-2xl font-bold bg-black bg-clip-text text-transparent">
-                FormBuilder
+                Kwiz
               </span>
             </div>
             <div className="flex items-center space-x-6">
@@ -39,7 +39,7 @@ export default function HomePage() {
                 Take Quiz
               </Link>
               <Link to="/editor" className="btn-primary">
-                Create Form
+                Create quiz
               </Link>
             </div>
           </div>
@@ -62,12 +62,12 @@ export default function HomePage() {
                 simplest
                 <img src="/title-highlight-2.png" alt="highlight" width="200" />
               </span>{' '}
-              way to create forms
+              way to create quizzes
             </h1>
 
 
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto text-center" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Say goodbye to boring forms. Meet FormBuilder — the free, intuitive form builder you've been looking for!
+              Say goodbye to boring quizzes. Meet Kwiz — the free, intuitive quiz builder you've been looking for!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center">
               <Link to="/preview" className="bg-pink-600 text-white rounded-xl px-6 py-2 text-base font-semibold hover:bg-pink-700 transition">
@@ -112,7 +112,7 @@ export default function HomePage() {
               Everything You Need to Create
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              FormBuilder makes it simple for anyone to build free online forms. No need to code — just type your questions like you would in a doc.
+              Kwiz makes it simple for anyone to build free online quizzes. No need to code — just type your questions like you would in a doc.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ export default function HomePage() {
               your favorite tools
             </h2>
             <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Save time using popular integrations to sync your form submissions.
+              Save time using popular integrations to sync your quiz submissions.
             </p>
           </div>
           {/* Right: Image */}
@@ -196,10 +196,10 @@ export default function HomePage() {
                   // style={{ zIndex: -1 }}
                 />
               </span>{' '}
-              forms
+              Quizzes
             </h2>
             <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Our smart features make it easy to turn your forms into a tailored experience for every respondent.
+              Our smart features make it easy to turn your quiz into a tailored experience for every respondent.
             </p>
           </div>
           {/* Right: Image */}
@@ -223,7 +223,7 @@ export default function HomePage() {
               Conditional logic
             </h3>
             <p className="text-lg text-gray-700 mb-8" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-              Build dynamic forms that adapt based on prior inputs or external data. Show and hide blocks, insert branching, or calculate values to create a personalized form experience.
+              Build dynamic quizzes that adapt based on prior inputs or external data. Show and hide blocks, insert branching, or calculate values to create a personalized quiz experience.
             </p>
             <div className="w-full flex justify-center">
               <img
@@ -246,7 +246,7 @@ export default function HomePage() {
               className="text-4xl md:text-5xl font-bold mb-6"
               style={{ fontFamily: 'Libertinus Serif, serif' }}
             >
-              Make forms uniquely{' '}
+              Make quizzes uniquely{' '}
               <span className="relative inline-block">
                 yours.
                 <img
@@ -258,7 +258,7 @@ export default function HomePage() {
               </span>{' '}
             </h2>
             <p className="text-xl text-gray-700 mb-4" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-            Easily customize the design and layout and the number of quizes to fit any form to your brand.
+            Easily customize the design and layout and the number of quizes to fit any quiz to your brand.
             </p>
           </div>
           {/* Right: Image */}
@@ -278,7 +278,7 @@ export default function HomePage() {
               className="text-2xl md:text-3xl font-bold mb-4"
               style={{ fontFamily: 'Libertinus Serif, serif' }}
             >
-              Customize your form
+              Customize your quiz
             </h3>
             <p className="text-lg text-gray-700 mb-8" style={{ fontFamily: 'Libertinus Serif, serif' }}>
               Use our pre-made themes or create your own design by customizing number of quizes, buttons, and more.
@@ -307,7 +307,7 @@ export default function HomePage() {
             </li>
             <li className="flex-1 text-center">
               <span className="font-bold block">Custom CSS</span>
-              <span className="font-normal text-gray-500 block mt-1">Inject custom CSS to fully control your form design.</span>
+              <span className="font-normal text-gray-500 block mt-1">Inject custom CSS to fully control your quiz design.</span>
             </li>
             <li className="flex-1 text-center">
               <span className="font-bold block md:text-right md:pr-8">Images</span>
@@ -336,7 +336,7 @@ export default function HomePage() {
           <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
             <img src="/boy.png" alt="Ms. Johnson" className="w-20 h-20 rounded-full mb-4 object-cover" />
             <blockquote className="italic text-gray-700 mb-3">
-              "FormBuilder made me realize I'm not as creative as I thought. Now my students expect engaging quizzes every week!"
+              "Kwiz made me realize I'm not as creative as I thought. Now my students expect engaging quizzes every week!"
             </blockquote>
             <span className="text-pink-500 font-medium">- Ms. Johnson, Math Teacher</span>
           </div>
@@ -368,7 +368,7 @@ export default function HomePage() {
           <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
             <img src="/girl.png" alt="Alex Kim" className="w-20 h-20 rounded-full mb-4 object-cover" />
             <blockquote className="italic text-gray-700 mb-3">
-              "I'm a developer who hates forms. FormBuilder made me question everything I thought I knew about UX design."
+              "I'm a developer who hates quizzes. Kwiz made me question everything I thought I knew about UX design."
             </blockquote>
             <span className="text-pink-500 font-medium">- Alex Kim, Software Engineer</span>
           </div>
@@ -376,7 +376,7 @@ export default function HomePage() {
           <div className="bg-white rounded-xl shadow-md p-8 flex flex-col items-center text-center">
             <img src="/girl (2).png" alt="Marcus Thompson" className="w-20 h-20 rounded-full mb-4 object-cover" />
             <blockquote className="italic text-gray-700 mb-3">
-              "My students think I'm a genius now. Little do they know, I just discovered the magic of FormBuilder's templates!"
+              "My students think I'm a genius now. Little do they know, I just discovered the magic of Kwiz's templates!"
             </blockquote>
             <span className="text-pink-500 font-medium">- Marcus Thompson, Art Teacher</span>
           </div>
@@ -426,7 +426,7 @@ export default function HomePage() {
                   <Zap className="w-5 h-5 t" />
                 </div>
                 <span className="text-2xl font-bold" style={{ fontFamily: 'Libertinus Serif, serif' }}>
-                  FormBuilder
+                  Kwiz
                 </span>
               </div>
               <p className="text-gray-500 text-sm">
@@ -466,7 +466,7 @@ export default function HomePage() {
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 FormBuilder. All rights reserved.</p>
+            <p>&copy; 2024 Kwiz. All rights reserved.</p>
           </div>
         </div>
       <div className="w-full flex justify-center mt-8">

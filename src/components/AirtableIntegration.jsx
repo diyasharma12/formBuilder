@@ -8,7 +8,7 @@ const AirtableIntegration = () => {
         <div className="md:w-1/2 w-full px-4 md:px-10 mt-10 md:mt-0">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Airtable</h1>
           <p className="text-lg text-gray-700 mb-6">
-            Airtable delivers the power of a database with the familiarity of a spreadsheet. Combine the power of Tally and Airtable with our new integration, and send your Tally form responses to Airtable in just a few clicks.
+            Airtable delivers the power of a database with the familiarity of a spreadsheet. Combine the power of Kwiz and Airtable with our new integration, and send your quiz responses to Airtable in just a few clicks.
           </p>
           <div className="bg-green-50 p-4 rounded-lg flex items-center mb-6">
             <svg
@@ -31,13 +31,7 @@ const AirtableIntegration = () => {
             <ol className="list-decimal list-inside text-gray-700 space-y-2">
               <li>Connect to Airtable</li>
               <li>Select your base and table</li>
-              <li>Map your fields
-                <ul className="ml-5 mt-2 space-y-1 text-sm text-blue-600">
-                  <li className="hover:underline cursor-pointer">How to map checkboxes to Airtable</li>
-                  <li className="hover:underline cursor-pointer">Map Checkboxes (Tally) to Multiple select (Airtable)</li>
-                  <li className="hover:underline cursor-pointer">Map Checkboxes (Tally) to Checkbox (Airtable)</li>
-                </ul>
-              </li>
+              <li>Map your fields</li>
               <li>Activate the Airtable integration</li>
             </ol>
           </div>

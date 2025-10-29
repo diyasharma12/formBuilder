@@ -8,7 +8,7 @@ const NotionIntegration = () => {
         <div className="md:w-1/2 w-full px-4 md:px-10 mt-10 md:mt-0">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Notion</h1>
           <p className="text-lg text-gray-700 mb-6">
-            formBuilder forms embed beautifully on your Notion pages. If you already use Notion to organize your workflow, this direct integration makes it easy to keep everything in one place and automatically send new Tally form submissions right into your Notion databases.
+            Kwiz forms embed beautifully on your Notion pages. If you already use Notion to organize your workflow, this direct integration makes it easy to keep everything in one place and automatically send new Quiz submissions right into your Notion databases.
           </p>
           <div className="bg-green-50 p-4 rounded-lg flex items-center mb-6">
             <svg
@@ -32,9 +32,7 @@ const NotionIntegration = () => {
               <li>
                 Connect to Notion
                 <ul className="ml-5 mt-2 space-y-1 text-sm text-blue-600">
-                  <li className="hover:underline cursor-pointer">How to map checkboxes to Notion</li>
-                  <li className="hover:underline cursor-pointer">How to map a Tally field to a Person property</li>
-                  <li className="hover:underline cursor-pointer">How to map a Tally field to a Relation property</li>
+                  <li className="hover:underline cursor-pointer"> <a href="https://www.youtube.com/watch?v=q0rc3Vm5Sdo" target="_blank" rel="noopener noreferrer"> How to map checkboxes to Notion </a> </li>
                 </ul>
               </li>
               <li>Select a database</li>
