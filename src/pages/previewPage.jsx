@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import API_BASE_URL from '../config/api.js';
 
 export default function HomePage() {
   const [quizzes, setQuizzes] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/quizzes')
+    axios.get(`${API_BASE_URL}/api/quizzes`)
       .then(res => {
         setQuizzes(res.data);
         setLoading(false);

@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom"; // Import useParams
+import API_BASE_URL from "../config/api.js";
 import QuestionNav from "../components/QuestionNav";
 import CategorizeAttempt from "../components/CategorizeAttempt";
 import ClozeAttempt from "../components/ClozeAttempt"; // Import ClozeAttempt
@@ -17,7 +18,7 @@ export default function PreviewPage() {
   useEffect(() => {
     // Only fetch if an ID exists
     if (id) {
-      axios.get(`http://localhost:5000/api/quizzes/${id}`)
+      axios.get(`${API_BASE_URL}/api/quizzes/${id}`)
         .then(res => {
           // Format the questions and store the entire quiz object
           const formattedQuestions = res.data.questions.map(q => ({
@@ -68,7 +69,7 @@ export default function PreviewPage() {
 
   // Send to backend (Notion)
   try {
-    await axios.post("http://localhost:5000/api/notion/submitQuiz", quizData);
+    await axios.post(`${API_BASE_URL}/api/notion/submitQuiz`, quizData);
     console.log("Submitted to Notion successfully");
   } catch (err) {
     console.error("Failed to submit quiz data to Notion:", err);
@@ -76,7 +77,7 @@ export default function PreviewPage() {
 
   // Send to backend (Google Sheets)
   try {
-    await axios.post("http://localhost:5000/api/googlesheets/submitQuiz", quizData);
+    await axios.post(`${API_BASE_URL}/api/googlesheets/submitQuiz`, quizData);
     console.log("Submitted to Google Sheets successfully");
   } catch (err) {
     console.error("Failed to submit quiz data to Google Sheets:", err);

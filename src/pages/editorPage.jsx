@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Plus, Save, Eye, ArrowRight, BookOpen, FileText, List } from "lucide-react";
+import API_BASE_URL from "../config/api.js";
 import CategorizeEditor from "../components/CategorizeEditor";
 import ClozeQuestionCard from "../components/ClozeQuestionCard";
 import ComprehensionQuestionCard from "../components/ComprehensionQuestionCard";
@@ -99,7 +100,7 @@ export default function EditorPage() {
       console.log("Saving quiz with payload:", JSON.stringify(payload, null, 2));
       console.log("Questions state:", questions);
       
-      const res = await axios.post("http://localhost:5000/api/quizzes", payload, {
+      const res = await axios.post(`${API_BASE_URL}/api/quizzes`, payload, {
         headers: { "Content-Type": "application/json" },
       });
 
